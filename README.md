@@ -10,10 +10,10 @@ Applied the custom executor memory configuration we created earlier.
 Created a new Spark session or reused an existing one.
 
 ## Then we imported following: 
-MongoClient: Connects to local MongoDB
-requests: Downloads raw CSV file from GitHub
-pandas: Loads and processes the CSV
-StringIO: Treats string like a file for pandas to read
+   MongoClient: Connects to local MongoDB  
+   requests: Downloads raw CSV file from GitHub  
+   pandas: Loads and processes the CSV
+   StringIO: Treats string like a file for pandas to read
 
 Then connected  to a MongoDB database called ‘Project’ and  
 created a collection called ‘Online_Retails’.
