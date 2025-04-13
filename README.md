@@ -1,4 +1,4 @@
-# BigData
+# h1- BigData technology
 First of all we imported essential modules like:
 * SparkSession – the entry point to use DataFrame and SQL APIs in PySpark.
 * SparkConf – used to customize Spark configurations.
