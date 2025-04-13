@@ -8,3 +8,19 @@ And connected Spark to a local MongoDB database:
 This enabled us to read from and write to MongoDB collections using Spark DataFrames.
 Applied the custom executor memory configuration we created earlier.
 Created a new Spark session or reused an existing one.
+
+## Then we imported following: 
+MongoClient: Connects to local MongoDB
+requests: Downloads raw CSV file from GitHub
+pandas: Loads and processes the CSV
+StringIO: Treats string like a file for pandas to read
+
+Then connected  to a MongoDB database called ‘Project’ and  
+created a collection called ‘Online_Retails’.
+Downloaded the CSV file from GitHub’s raw link.
+
+Then we treated the CSV string as a file and 
+loaded it into a pandas DataFrame.
+
+We converted the DataFrame into a list of dictionaries, where each dictionary = one row. Then 
+added all records to MongoDB collection in one go.
