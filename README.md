@@ -10,7 +10,7 @@ MongoDB integration via spark.mongodb.read/write.connection.uri
 
 ![Alt text](/pyspark%20initialization.png)
 
-🧱 2. MongoDB Data Ingestion
+🧱 **2. MongoDB Data Ingestion**
 MongoDB DB & Collection: Project.Online_Retails
 
 Source Data: CSV from GitHub (Online Retail dataset)
@@ -27,7 +27,7 @@ Insert ~541,909 records into MongoDB
 
 
 
-🧹 3. Data Cleaning (Pandas)
+🧹 **3. Data Cleaning (Pandas)**
 Total records after load: 2,167,636
 
 Missing Values:
@@ -41,7 +41,7 @@ Dropped nulls → Remaining rows: 1,627,316
 Removed duplicates → Final clean rows: 1,627,316
 ![Alt text](/Check%20for%20missing%20and%20drop%20missing%20value.png)
 
-📊 4. Feature Engineering
+📊 **4. Feature Engineering**
 Converted InvoiceDate to datetime
 
 Extracted YearMonth (period)
@@ -50,12 +50,14 @@ Created new column: TotalSale = Quantity * UnitPrice
 ![Alt text](/monthly_sales.png)
 
 
-📈 5. Sales Aggregation
+📈 **5. Sales Aggregation**
+
 ✅ Monthly Sales
 YearMonth	TotalSale
 2010-12	552,372.86
 2011-01	473,731.90
 ...	...
+
 2011-12	341,539.43
 ✅ Sales by Country
 Country	TotalSale
@@ -66,7 +68,7 @@ France	196,626.05
 ...	...
 ![Alt text](/countryaggregation.png)
 
-📥 6. Store Aggregated Results in MongoDB
+📥 **6. Store Aggregated Results in MongoDB**
 Collection: Project.sales_data
 
 Inserted: 50 records (Monthly + Country-wise summaries)
@@ -74,7 +76,7 @@ Inserted: 50 records (Monthly + Country-wise summaries)
 ![Alt text](/WhatsApp%20Image%202025-04-10%20at%2022.00.19.jpeg)
 
 
-⚡ 7. PySpark Integration
+⚡ **7. PySpark Integration**
 Converted Pandas DataFrame to PySpark DataFrame
 
 Registered as SQL View sales_view
@@ -89,12 +91,12 @@ Cached df1_spark for performance
 ![Alt text](/pysparkIntegration.png)
 
 
-🔍 8. Indexing
+🔍 **8. Indexing**
 Created an index on InvoiceDate in MongoDB to speed up queries.
 ![Alt text](/indexing.png)
 
 
-📊 9. Visualizations
+📊 **9. Visualizations**
 Monthly Sales Trend → Line chart (Seaborn)
 
 Sales by Country → Bar chart
