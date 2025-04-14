@@ -22,7 +22,9 @@ Read the CSV
 Clean and preprocess data
 
 Insert ~541,909 records into MongoDB
-![Alt text](path/to/image.jpg)
+![Alt text](/Import%20CSV.png)
+![Alt text](/WhatsApp%20Image%202025-04-10%20at%2022.00.22.jpeg)
+
 
 
 🧹 3. Data Cleaning (Pandas)
@@ -37,7 +39,7 @@ CustomerID: 540,320 missing → Dropped
 Dropped nulls → Remaining rows: 1,627,316
 
 Removed duplicates → Final clean rows: 1,627,316
-![Alt text](path/to/image.jpg)
+![Alt text](/Check%20for%20missing%20and%20drop%20missing%20value.png)
 
 📊 4. Feature Engineering
 Converted InvoiceDate to datetime
@@ -45,7 +47,7 @@ Converted InvoiceDate to datetime
 Extracted YearMonth (period)
 
 Created new column: TotalSale = Quantity * UnitPrice
-![Alt text](path/to/image.jpg)
+![Alt text](/monthly_sales.png)
 
 
 📈 5. Sales Aggregation
@@ -62,10 +64,15 @@ Netherlands	284,661.54
 EIRE (Ireland)	250,001.78
 France	196,626.05
 ...	...
+![Alt text](/countryaggregation.png)
+
 📥 6. Store Aggregated Results in MongoDB
 Collection: Project.sales_data
 
 Inserted: 50 records (Monthly + Country-wise summaries)
+![Alt text](/storeaggregated.png)
+![Alt text](/WhatsApp%20Image%202025-04-10%20at%2022.00.19.jpeg)
+
 
 ⚡ 7. PySpark Integration
 Converted Pandas DataFrame to PySpark DataFrame
@@ -79,24 +86,18 @@ Schema verified
 Repartitioned data by Country
 
 Cached df1_spark for performance
+![Alt text](/pysparkIntegration.png)
+
 
 🔍 8. Indexing
 Created an index on InvoiceDate in MongoDB to speed up queries.
+![Alt text](/indexing.png)
+
 
 📊 9. Visualizations
 Monthly Sales Trend → Line chart (Seaborn)
 
 Sales by Country → Bar chart
-
-✅ Key Takeaways
-Cleaned and processed over 1.6 million rows of retail data
-
-Integrated MongoDB, Pandas, PySpark, Seaborn, and Matplotlib
-
-Performed insightful aggregation by month and country
-
-Stored clean and enriched data in MongoDB
-
-Optimized PySpark operations with caching and repartitioning
+![Alt text](/visualization.png)
 
 
