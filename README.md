@@ -8,7 +8,7 @@ Spark session created with:
 
 MongoDB integration via spark.mongodb.read/write.connection.uri
 
-![Alt text](path/to/image.jpg)
+![Alt text](/pyspark%20initialization.png)
 
 🧱 2. MongoDB Data Ingestion
 MongoDB DB & Collection: Project.Online_Retails
